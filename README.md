@@ -223,17 +223,70 @@ var removeArray =ourArray.unshift(['frank',20]);
 console.log(ourArray);=>[ [ 'frank', 20 ], [ 'jhon', 23 ], [ 'cat', 2 ] ]
 ```
 
+- Function(reuseable)
+
+```JS
+function ourReuseableFunction(){
+    console.log('Hello,World');
+}
+
+ourReuseableFunction();=>Hello,World
+```
+
+- Using arguments in a function
+
+```JS
+function functionWithArgs(a,b){
+    console.log(a-b);
+}
+
+functionWithArgs(10,5);=>5
 
 
+```
+- Global Scope->Variables or functions that are declared outside of any function or block and can be accessed from anywhere in the program.
+
+```JS
+let myName = 'Bob'   // global variable
+
+function sayHello() {
+    console.log(myName) 
+}
+
+sayHello()
+console.log(myName)    
+```
+➡️ myName is in the global scope.
+
+- Local Scope->only inside the function.
+
+```JS
+
+function test() {
+    let age = 20
+    console.log(age) 
+}
+
+console.log(age) 
+```
+➡️ age exists only inside the function.
+
+Global vs. Local: when this happens, local scope takes precedence over global!
 
 
+```JS
+var outerWear ="T-shirt"; //Global Scope
 
+function myOutfit(){
+    
+    var outerWear='Sweater'; //local var/scope
 
+    return outerWear;
+}
 
+console.log(myOutfit()); =>Sweater
 
-
-
-
+```
 
 
 

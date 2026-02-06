@@ -437,6 +437,7 @@ console.log(statementChaning(10));
 ```
 
 - Golf Math(ex-1)
+  
 ```JS
 var names =["Hole-in-one","Eagle","Birdie","Par","Bogey","Double Bogey"]
 
@@ -469,15 +470,73 @@ console.log(golfScore(5,4))
 
 ```
 
+- Objects =>An object is a collection of key–value pairs.
 
+```Plaintext
+Key = property name
+Value = data (string, number, array, function, even another object)
 
+```
 
+```JS
+const ourDog={
+    "name":"camper",
+    'legs':4,
+    "tails":1,
+    "firends":['mika','frank','lee'],
+};
+```
 
+- Dot notation =>Accessing object data
+  
+```JS  
+console.log(ourDog.name);=>
+```
+- Bracket notation =>Accessing object data
 
+```JS
+console.log(ourDog["name"]);=>camper
+```
 
+- Updating/Adding object
 
+```JS
+ourDog.name="Goldy";
+console.log(ourDog); =>  {
+                          name: 'Goldy',
+                          legs: 4,
+                          tails: 1,
+                          firends: [ 'mika', 'frank', 'lee' ]
+                        }
+```
+- Adding new property
 
+```JS
+ourDog.bark = 'meow-meow';
+ourDog.color = ['black'];
 
+console.log(ourDog);  =>{
+                          name: 'Goldy',
+                          legs: 4,
+                          tails: 1,
+                          firends: [ 'mika', 'frank', 'lee' ],
+                          bark: 'meow-meow',
+                          color: [ 'black' ]
+                        }
+
+```
+- Delete property
+
+```JS  
+delete ourDog.color;
+console.log(ourDog); ={
+                          name: 'Goldy',
+                          legs: 4,
+                          tails: 1,
+                          firends: [ 'mika', 'frank', 'lee' ],
+                          bark: 'meow-meow'
+                        }
+```
 
 
 

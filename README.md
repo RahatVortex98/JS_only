@@ -287,6 +287,194 @@ function myOutfit(){
 console.log(myOutfit()); =>Sweater
 
 ```
+- Return
+
+```JS
+//Defined value
+
+function minusSeven(num){
+    return num -7;
+}
+console.log(minusSeven(10));=>3
+
+function timesFive(num){
+    return num *5
+}
+console.log(timesFive(5));=>25
+
+```
+- Stand In Line =>It means FIFO: First In, First Out
+
+```Plaintext
+combination of push and shift: put last, remove 1st element!
+```
+
+```JS
+
+function nextInLine(array,item){
+
+    array.push(item); //2nd work here add new element
+    return array.shift(); //1st work here remove 1st element
+}
+
+var testarr=[1,2,3,4,5];
+
+console.log(nextInLine(testarr,6));
+console.log(testarr);
+
+```
+
+- Boolean 
+
+
+- If statement:
+
+```JS
+function ourTrueOrFalse(isItTrue){
+    if(isItTrue){
+        return 'Yes this is ture';
+    }
+    return "no it's false";
+}   
+
+console.log(ourTrueOrFalse(true));=>Yes this is ture
+```
+
+- Operators
+
+```JS
+== -> equal to
+=  -> assign value
+
+function testStrict(val){
+    if (val==10){
+        return 'equal';
+    }
+    return "not equal";
+}
+console.log(testStrict(12));
+
+// === ->strict equality
+
+function testStrict(val){
+    if (val===10){
+        return 'equal';
+    }
+    return "not equal";
+}
+console.log(testStrict(12)); =>not equal
+
+5 === "5"   // false ✅
+true === 1  // false ✅
+```
+
+- AND/OR operator
+
+```JS
+
+function testLogicalAnd(val){
+    if(val<=50 && val>=25){
+        return 'yes';
+    }
+    return 'No';
+}
+console.log(testLogicalAnd(26));
+
+function testLogicalAnd(val){
+    if(val<=50 || val>=25){
+        return 'yes';
+    }
+    return 'No';
+}
+console.log(testLogicalAnd(100));
+
+
+```
+
+- Else statement
+
+```JS
+function testElse(val){
+    // var result ="";
+
+    if(val>5){
+        result ="bigger than 5";
+    }
+    else{
+        result = "result smaller than 5"
+    }
+
+    return result;
+}
+
+console.log(testElse(4));
+
+
+function statementChaning(size){
+    if(size <5 ){
+        return "Tiny";
+    }
+    else if(size<10){
+        return "small";
+    }
+    else if(size<15){
+        return "medium";
+    }
+    else if(size<20){
+        return "large";
+    }
+    else if(seize>=20){
+        return "huge";
+    }
+    else{
+        return "nothing"
+    }
+}
+
+console.log(statementChaning(10));
+
+
+```
+
+- Golf Math(ex-1)
+```JS
+var names =["Hole-in-one","Eagle","Birdie","Par","Bogey","Double Bogey"]
+
+function golfScore(par,strokes){
+
+    if(strokes == 1){
+        return names[0];
+    }
+    else if(strokes<= - 2){
+        return names[1];
+    }
+    else if(strokes == par -1){
+        return names[2];
+
+    }
+    else if(strokes == par){
+        return names[3];
+    }
+    else if(strokes == par+1){
+        return names[4];
+    }
+    else if(strokes == par+2){
+        return names[5];
+    }
+    else{
+        return "go home";
+    }
+}
+console.log(golfScore(5,4))
+
+```
+
+
+
+
+
+
+
 
 
 

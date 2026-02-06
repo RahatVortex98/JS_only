@@ -209,20 +209,216 @@
 
 //Global vs Local
 
-var outerWear ="T-shirt"; //Global Scope
+// var outerWear ="T-shirt"; //Global Scope
 
-function myOutfit(){
+// function myOutfit(){
     
-    var outerWear='Sweater'; //local var/scope
+//     var outerWear='Sweater'; //local var/scope
 
-    return outerWear;
-}
+//     return outerWear;
+// }
 
-console.log(myOutfit());
+// console.log(myOutfit());
 
-//Return
+// //Return
 
-function minusSeven(num){
-    return num -7;
-}
-console.log(minusSeven(10));
+// function minusSeven(num){
+//     return num -7;
+// }
+// console.log(minusSeven(10));
+
+// function timesFive(num){
+//     return num *5
+// }
+// console.log(timesFive(5));
+
+
+
+// var changed=0;
+
+// function change(num){
+//     return (num+5)/3;
+// }
+// changed=change(10);
+
+//Stand In Line
+
+
+// function nextInLine(array,item){
+
+//     array.push(item);
+//     return array.shift();
+// }
+
+// var testarr=[1,2,3,4,5];
+
+// console.log(nextInLine(testarr,6));
+// console.log(testarr);
+
+
+//If Statements
+
+// function ourTrueOrFalse(isItTrue){
+//     if(isItTrue){
+//         return 'Yes this is ture';
+//     }
+//     return "no it's false";
+// }   
+
+// console.log(ourTrueOrFalse(true));
+
+
+// function tureOrFalse(wasThatTrue){
+//     if(wasThatTrue){
+//         return 'True';
+//     }
+//     return 'False'
+// }
+// console.log(tureOrFalse(false));
+
+
+// //Operators
+
+// function testStrict(val){
+//     if (val==10){
+//         return 'equal';
+//     }
+//     return "not equal";
+// }
+
+// console.log(testStrict(12));
+
+
+
+// function testStrict(val){
+//     if (val===10){
+//         return 'equal';
+//     }
+//     return "not equal";
+// }
+// console.log(testStrict(12));
+
+
+
+// function testLogicalAnd(val){
+//     if(val<=50 && val>=25){
+//         return 'yes';
+//     }
+//     return 'No';
+// }
+// console.log(testLogicalAnd(26));
+
+// function testLogicalAnd(val){
+//     if(val<=50 || val>=25){
+//         return 'yes';
+//     }
+//     return 'No';
+// }
+// console.log(testLogicalAnd(100));
+
+
+//else Statement
+
+
+// function testElse(val){
+//     // var result ="";
+
+//     if(val>5){
+//         result ="bigger than 5";
+//     }
+//     else{
+//         result = "result smaller than 5"
+//     }
+
+//     return result;
+// }
+
+// console.log(testElse(4));
+
+
+// function statementChaning(size){
+//     if(size <5 ){
+//         return "Tiny";
+//     }
+//     else if(size<10){
+//         return "small";
+//     }
+//     else if(size<15){
+//         return "medium";
+//     }
+//     else if(size<20){
+//         return "large";
+//     }
+//     else if(seize>=20){
+//         return "huge";
+//     }
+//     else{
+//         return "nothing"
+//     }
+// }
+
+// console.log(statementChaning(10));
+
+
+//GOLF code
+
+// var names =["Hole-in-one","Eagle","Birdie","Par","Bogey","Double Bogey"]
+
+// function golfScore(par,strokes){
+
+//     if(strokes == 1){
+//         return names[0];
+//     }
+//     else if(strokes<= - 2){
+//         return names[1];
+//     }
+//     else if(strokes == par -1){
+//         return names[2];
+
+//     }
+//     else if(strokes == par){
+//         return names[3];
+//     }
+//     else if(strokes == par+1){
+//         return names[4];
+//     }
+//     else if(strokes == par+2){
+//         return names[5];
+//     }
+//     else{
+//         return "go home";
+//     }
+// }
+// console.log(golfScore(5,4))
+
+
+
+//Objects
+
+
+const ourDog={
+    "name":"camper",
+    'legs':4,
+    "tails":1,
+    "firends":['mika','frank','lee'],
+};
+console.log(ourDog);
+
+//Dot notation
+console.log(ourDog.name);
+//bracket notation
+console.log(ourDog["name"]);
+
+//Updating object
+ourDog.name="Goldy";
+console.log(ourDog);
+
+//Adding new property
+
+ourDog.bark = 'meow-meow';
+ourDog.color = ['black'];
+
+console.log(ourDog);
+
+delete ourDog.color;
+console.log(ourDog);

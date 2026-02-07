@@ -396,29 +396,251 @@
 //Objects
 
 
-const ourDog={
-    "name":"camper",
-    'legs':4,
-    "tails":1,
-    "firends":['mika','frank','lee'],
-};
-console.log(ourDog);
+// const ourDog={
+//     "name":"camper",
+//     'legs':4,
+//     "tails":1,
+//     "firends":['mika','frank','lee'],
+// };
+// console.log(ourDog);
 
-//Dot notation
-console.log(ourDog.name);
-//bracket notation
-console.log(ourDog["name"]);
+// //Dot notation
+// console.log(ourDog.name);
+// //bracket notation
+// console.log(ourDog["name"]);
 
-//Updating object
-ourDog.name="Goldy";
-console.log(ourDog);
+// //Updating object
+// ourDog.name="Goldy";
+// console.log(ourDog);
 
-//Adding new property
+// //Adding new property
 
-ourDog.bark = 'meow-meow';
-ourDog.color = ['black'];
+// ourDog.bark = 'meow-meow';
+// ourDog.color = ['black'];
 
-console.log(ourDog);
+// console.log(ourDog);
 
-delete ourDog.color;
-console.log(ourDog);
+// //delete property
+// delete ourDog.color;
+// console.log(ourDog);
+
+
+// //complex Object
+
+
+// const myMusic = [
+//     {
+//         "artist":"Billie",
+//         "title":"Piano Man",
+//         "release_year":1973,
+//         "formats":[
+//             'cD',
+//             "LP",
+//             "8T",
+//         ],
+//         "gold":true
+//     },
+//     {
+//         "artist":"nelly",
+//         "title":"Hope it's a dream",
+//         "release_year":2019,
+//         "formats":[
+//             "Youtube",
+//             "DVD",
+//         ],
+//         "gold":false
+//     },
+// ];
+
+// //Accessing nested Object 
+
+// const myStorage ={
+//     "car":{
+//         "inside":{
+//             "glove box":"maps",
+//             "passenger seat":"crumbs",
+//         },
+//         "outside":{
+//             "trunk":"jack"
+//         }
+// }
+// };
+// const myAccess =myStorage.car.inside["glove box"];
+// console.log(myAccess);
+
+
+// //Nested Array
+
+// const myPlants = [
+//     {
+//         type: "flower",
+//         List: ["rose", "tulip", "dasy"],
+//         area: ["south", "north"]
+//     },
+//     {
+//         type: "trees",
+//         List: ["fir", "pine"],
+//         area: ["east", "west"]
+//     }
+// ];
+// const plantAcess=myPlants[0].List[1];
+// const plantArea =myPlants[0].area[1];
+// console.log(plantAcess);
+// console.log(plantArea);
+
+
+// //Record Collection
+
+
+// const recordCollection={
+
+//     2448:{
+//         albumTitle:"Slippery when wet",
+//         artist : "bon Jovi",
+//         tracks: ["Let It Rock", "You Give Love a Bad Name"]
+//     },
+//     2785:{
+//         albumTitle: "1999",
+//         artist: "Prince",
+//         tracks: ["1999", "Little Red Corvette"]
+//     },
+//     2505:{
+//         artist: "Robert Palmer",
+//         tracks: []
+//     }
+
+
+// };
+
+// //Updating
+
+// function updateRecord(id,prop,value){
+
+//     if(value === ""){
+//         delete recordCollection[id][prop];
+//     }
+//     else if(prop === "tracks"){
+//         recordCollection[id][prop]=recordCollection[id][prop] || [];
+//         recordCollection[id][prop].push(value);
+//     }
+//     else{
+//         recordCollection[id][prop]=value;
+//     }
+//     return recordCollection;
+
+// }
+//   console.log(updateRecord(2505,"artist",'Ganja'));
+
+
+
+//while loop
+// const myArray = [];
+
+// let i = 0;
+// while (i < 5) {
+//     myArray.push(i);
+//     i++;
+// }
+
+// console.log(myArray);
+
+// //For loops
+
+// let ourArray =[];
+
+// for(let i=0;i<6;i++){
+//     ourArray.push(i);
+// }
+
+// console.log(ourArray);
+
+//odd number
+
+// let myArr=[];
+
+// for(let i=1;i<10;i+=2){
+//     myArr.push(i);
+// }
+// console.log(myArr);
+
+//count backward
+// let myArr=[];
+
+// for(let i=10;i>0;i-=1){
+//     myArr.push(i);
+// }
+// console.log(myArr);
+
+
+// const ourArr=[9,10,11,12];
+// let ourTotal=0;
+
+// for(let i=0;i<ourArr.length;i++){
+//   ourTotal = ourTotal + ourArr[i];
+// }
+// console.log(ourTotal);
+
+
+// const myArr=[2,3,4,5,6];
+// let ourAdd=0;
+// for(i=0;i<myArr.length;i++){
+//     ourAdd = ourAdd+myArr[i];
+// }
+// console.log(ourAdd);
+
+//Nested Loops
+
+//RandomFraction and Whole number
+
+
+//Ternary Operator
+
+// condition ? statement-if-true : statement-if-false;
+function checkEqual(a,b){
+    return a===b ? true :false;
+}
+console.log(checkEqual(1,2));
+
+//Multiple ternary operator
+
+function checkSign(num){
+    return num > 0 ? "positive":num<0 ?"negative":"zero"
+}
+console.log(checkSign(10));
+
+//const =>read only mode
+
+// const s =[5,7,2];
+// function editPlace(){
+//     s=[2,5,7];
+// }
+
+// editPlace();
+
+// const m =[5,7,2];
+// function editPlace(){
+//     m[0]=2;
+//     m[1]=5;
+//     m[2]=7;
+// }
+
+// editPlace();
+// console.log(m);
+
+
+//Arrow Function
+
+// let magic = function(){
+//     return Date();
+// }
+
+// let magic = () =>new Date();
+
+// const myConcat = function(arr1,arr2){
+//     return arr1.concat(arr2);
+// };
+
+
+const myConcat = (arr1,arr2) =>arr1.concat(arr2);
+
+console.log(myConcat([1,2],[3,5]))

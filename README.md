@@ -699,6 +699,66 @@ for(let i=0;i<ourArr.length;i++){
 console.log(ourTotal);
 
 ```
+- Ternary Operator=>condition ? statement-if-true : statement-if-false;
+
+```JS
+function checkEqual(a,b){
+    return a===b ? true :false;
+}
+console.log(checkEqual(1,2));
+```
+
+//const => read-only mode can't change.
+
+```JS
+const s =[5,7,2];
+function editPlace(){
+    s=[2,5,7];
+}
+
+editPlace();
+
+```
+//Update this way const
+
+```JS
+const m =[5,7,2];
+function editPlace(){
+    m[0]=2;
+    m[1]=5;
+    m[2]=7;
+}
+
+editPlace();
+console.log(m);=>[ 2, 5, 7 ]
+```
+- Arrow Function
+
+```JS
+let magic = function(){
+    return Date();
+}
+        ⬇️
+let magic = () =>new Date();
+```
+Parameter with arrow function:
+
+```JS
+const myConcat = function(arr1,arr2){
+    return arr1.concat(arr2);
+};
+         ⬇️
+
+const myConcat = (arr1,arr2)=>arr1.concat(arr2);
+
+```
+         ⬇️
+```
+const myConcat = (arr1,arr2) =>arr1.concat(arr2);
+
+console.log(myConcat([1,2],[3,5]));=>[ 1, 2, 3, 5 ]
+
+```
 
 
 

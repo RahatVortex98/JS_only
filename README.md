@@ -538,21 +538,167 @@ console.log(ourDog); ={
                         }
 ```
 
+- Complex Object=> similar to JSON myMusic Array has 2 object !
+
+```JS
+const myMusic = [
+    {
+        "artist":"Billie",
+        "title":"Piano Man",
+        "release_year":1973,
+        "formats":[
+            'cD',
+            "LP",
+            "8T",
+        ],
+        "gold":true
+    },
+    {
+        "artist":"nelly",
+        "title":"Hope it's a dream",
+        "release_year":2019,
+        "formats":[
+            "Youtube",
+            "DVD",
+        ],
+        "gold":false
+    },
+];
+```
+- Accessing nested Object 
+
+```JS
+const myStorage ={
+    "car":{
+        "inside":{
+            "glove box":"maps",
+            "passenger seat":"crumbs",
+        },
+        "outside":{
+            "trunk":"jack"
+        }
+}
+};
+const myAccess =myStorage.car.inside["glove box"];
+console.log(myAccess);
+```
+
+- Nested array accessing:
+
+```JS
+  const myPlants = [
+    {
+        type: "flower",
+        List: ["rose", "tulip", "daisy"],
+        area: ["south", "north"]
+    },
+    {
+        type: "trees",
+        List: ["fir", "pine"],
+        area: ["east", "west"]
+    }
+];
+const plantAcess=myPlants[0].List[1];
+const plantArea =myPlants[0].area[1];
+console.log(plantAcess);
+console.log(plantArea);
+```
+
+- Record Collection =>A record collection is a nested object structure used to store multiple records, where a unique key identifies each record and contains related data
+
+```
+object → object → array
+```
+
+```JS
+const recordCollection={
+
+    2448:{
+        albumTitle:"Slippery when wet",
+        artist : "bon Jovi",
+        tracks: ["Let It Rock", "You Give Love a Bad Name"]
+    },
+    2785:{
+        albumTitle: "1999",
+        artist: "Prince",
+        tracks: ["1999", "Little Red Corvette"]
+    },
+    2505:{
+        artist: "Robert Palmer",
+        tracks: []
+    }
+
+
+};
+//Accessing
+const songCollection =recordCollection[2505].artist;
+console.log(songCollection); =>Robert Palmer
+
+```
+
+- While Loops
+
+```JS
+const myArray = [];
+
+let i = 0;
+while (i < 5) {
+    myArray.push(i);
+    i++;
+}
+
+console.log(myArray);
+
+
+```
+
+- For Loop
+
+```JS
+ let ourArray =[];
+for(let i=0;i<6;i++){
+    ourArray.push(i);
+ }
+ console.log(ourArray);
+
+```
+- odd number
 
 
 
+```JS
+let myArr=[];
+ for(let i=1;i<10;i+=2){
+     myArr.push(i); 
+     }
+ console.log(myArr);
 
+```
 
+- count backward
+  
+```JS
+let myArr=[];
 
+for(let i=10;i>0;i-=1){
+    myArr.push(i);
+}
+console.log(myArr);
 
+```
 
+- Iterate
 
+```JS
+const ourArr=[9,10,11,12];
+let ourTotal=0;
 
+for(let i=0;i<ourArr.length;i++){
+  ourTotal = ourTotal + ourArr[i];
+}
+console.log(ourTotal);
 
-
-
-
-
+```
 
 
 

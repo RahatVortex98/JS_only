@@ -752,14 +752,238 @@ const myConcat = function(arr1,arr2){
 const myConcat = (arr1,arr2)=>arr1.concat(arr2);
 
 ```
+
          ⬇️
-```
+
+```JS
 const myConcat = (arr1,arr2) =>arr1.concat(arr2);
 
 console.log(myConcat([1,2],[3,5]));=>[ 1, 2, 3, 5 ]
 
 ```
+- Rest Operators =>The rest operator is written as ... and it’s used to collect multiple values into a single array.
+
+Rule:
+Rest parameter must be last
+
+```JS
+const sum =(function(){
+    return function sum(x,y,z){
+        const args =[x,y,z];
+        return args.reduce((a,b)=>a+b,0);
+    };
+
+})();
+console.log(sum(1,2,3));
+
+            ⬇️
+
+const sum =(function(){
+    return function sum(...args){
+        
+        return args.reduce((a,b)=>a+b,0);
+    };
+
+})();
+console.log(sum(1,2,3))
+
+```
+
+| Operator           | Does what                     |
+| ------------------ | ----------------------------- |
+| **Rest (`...`)**   | Collects values into an array |
+| **Spread (`...`)** | Expands values out            |
 
 
+
+- Destructuring Assignment =>
+
+Without destructuring ❌
+
+```JS
+
+const user = {
+    name: "Bob",
+    age: 22,
+    city: "Dhaka"
+};
+
+const name = user.name;
+const age = user.age;
+
+```
+
+With destructuring ✅
+
+```JS
+const { name, age } = user;
+```
+
+- Template Literals:
+
+```JS
+const name = "Alex";
+const age = 21;
+
+console.log(`My name is ${name} and I am ${age} years old`);
+
+👉 ${} allows you to insert any JS expression.
+
+```
+
+
+<h3 align="center> FOR REACT </h3>
+
+1️⃣ export default vs named export (VERY IMPORTANT FOR REACT)
+✅ Default export
+
+```JS
+export default function doSomething() {
+
+}
+```
+1. Only one default export per file
+2. You can import it with any name
+
+```JS
+import doSomething from "./file";
+```
+✅ Named export
+
+```JS
+export const doSomething = () => {
+
+};
+```
+1. You can have multiple named exports
+2. Import name must match exactly
+
+```JS
+import { doSomething } from "./file";
+```
+
+📌 React rule of thumb:
+1. Components → usually export default
+2. Helpers / utils → named exports
+
+2️⃣ Arrow function in onClick (React event handling)
+
+```JS
+<button onClick={() => {
+    console.log("hello world");
+}}>
+</button>
+```
+What’s happening:
+
+1. onClick expects a function
+2. Arrow function prevents immediate execution
+
+3️⃣ Ternary Operator (React CONDITIONAL RENDERING 🔥)
+
+let age = 16;
+let name = age > 10 ? "Pedro" : "Jack";
+
+Structure:
+
+```JS
+condition ? valueIfTrue : valueIfFalse
+```
+React JSX version:
+
+```JS
+const Component = () => {
+    return age > 10 ? <div>Pedro</div> : <div>Jack</div>;
+};
+```
+React cannot use if directly inside JSX, so:
+
+1. ternary
+2. &&
+3. functions
+This is 🔑 for dynamic UI.
+
+4️⃣ Objects (state, props, API responses)
+
+```JS
+const person = {
+    name: "Pedro",
+    age: 30,
+    isMarried: false,
+};
+```
+React uses objects everywhere:
+
+1. props
+2. state
+3. API data
+5️⃣ Destructuring assignment (React favorite ❤️)
+
+```JS
+const { name, age, isMarried } = person;
+```
+In React props (REAL USE)
+
+```JS
+
+function User({ name, age }) {
+    return <h1>{name} - {age}</h1>;
+}
+```
+
+6️⃣ Spread Operator (...)=> The spread operator copies all properties from an object (or array) into a new one.
+
+```JS
+const person1={
+    name:"maria",
+    age:46,
+    isMarried: true,
+}
+
+
+const person2={...person1,name:'Ramos',isMarried:false}
+console.log(person2); =>{ name: 'Ramos', age: 46, isMarried: false }
+
+```
+7️⃣ map() ⭐ (MOST IMPORTANT FOR REACT)=>map() is how React renders lists.
+
+👉 map() does NOT change the original array
+👉 map() returns a NEW array
+
+map() = take one array → create a NEW array → same length → each item transformed
+
+map() formula (memorize this)
+
+```Plaintext
+const newArray = oldArray.map(item => NEW_VALUE);
+```
+
+```JS
+
+let names=["pedro",'jess','leon'];
+
+const newNames=names.map((name)=>{
+    return name+"1";
+});
+console.log(newNames);
+
+```
+8️⃣ filter() (remove, search, hide items)=>filter() goes through an array and keeps only the items that return true
+
+1. returns a NEW array
+2. original array stays unchanged
+3. length can be smaller
+
+```JS
+let names = ["pedro", "jess", "leon", "pedro"];
+
+const filteredName = names.filter((name) => {
+    return name !== "pedro";
+});
+```
+Golden rule 🧠
+
+map() changes items
+filter() removes items
 
 

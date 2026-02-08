@@ -641,6 +641,177 @@ console.log(checkSign(10));
 // };
 
 
-const myConcat = (arr1,arr2) =>arr1.concat(arr2);
+// const myConcat = (arr1,arr2) =>arr1.concat(arr2);
 
-console.log(myConcat([1,2],[3,5]))
+// console.log(myConcat([1,2],[3,5]))
+
+
+// //HIgher function 
+
+// const realNumberArray = [4,5.6,-9.8,3.14,42,6,8.34,-2];
+
+// const squareList =(arr)=>{
+//     const squareIntegers =arr.filter(num=>Number.isInteger(num) && num>0).map(x=>x*x);
+//     return squareIntegers;
+// }
+// const squareIntegers = squareList(realNumberArray);
+// console.log(squareIntegers);
+
+
+
+//Rest operators
+
+// const sum =(function(){
+//     return function sum(x,y,z){
+//         const args =[x,y,z];
+//         return args.reduce((a,b)=>a+b,0);
+//     };
+
+// })();
+// console.log(sum(1,2,3));
+
+// const sum =(function(){
+//     return function sum(...args){
+        
+//         return args.reduce((a,b)=>a+b,0);
+//     };
+
+// })();
+// console.log(sum(1,2,3))
+
+
+// //Spread Operator
+
+// const arr1 =['JAN','FEB','MAR','APR','MAY'];
+// let arr2;
+// (function(){
+//     arr2 = [...arr1];
+//     arr1[0]='potato'
+// })();
+// console.log(arr2);
+// console.log(arr1);
+
+
+// const arr = [1, 2, 3];
+// console.log(...arr); // 1 2 3
+
+
+// //Template literals
+
+// const person ={
+//     name:'Zodiac',
+//     age:56
+// };
+
+// const greeting = `Hello my name is ${person.name} I am ${person.age} years old`;
+
+// console.log(greeting);
+
+
+// function greet(name){
+//     return `HEllo ${name}`;
+// }
+// console.log(greet('bob'))
+
+
+// const createPerson =(name,age,gender)=>{
+//     return{
+//         name:name,
+//         age:age,
+//         gender:gender
+//     };
+
+// };
+// console.log(createPerson("zodiac","56","male"));
+
+
+
+
+// const updatePerson =(name,age,gender)=>({name,age,gender});
+// console.log(updatePerson("zodiac","56","male"));
+
+
+// //FOR REACT
+
+
+// export default function doSomething(){
+
+// };
+
+// export const doSomething =()=>{
+
+// };
+
+
+// <button onClick={ ()=>{
+//     console.log("hello world");
+// }}>
+
+// </button>
+
+
+// //Ternary Operator
+
+// let age= 16;
+// let name = age>10?"Pedro":"Jack";
+
+
+// const component =()=>{
+//     return age>10?<div>Pedro</div>: <div>Jack</div>
+// };
+
+
+// //Objects
+
+// // regular objects
+
+
+// const person = {
+//     name:"Pedro",
+//     age:30,
+//     isMarried:false,
+// };
+
+// const name = person.name
+// const age =person.age
+// const isMarried = person.isMarried
+
+
+// //using destructing
+
+
+// const {name,age,isMarried}=person;
+
+
+//spread operator
+
+// const person1={
+//     name:"maria",
+//     age:46,
+//     isMarried: true,
+// }
+
+
+// const person2={...person1,name:'Ramos',isMarried:false}
+// console.log(person2);
+
+
+//.map()
+
+let names=["pedro",'jess','leon'];
+
+const newNames=names.map((name)=>{
+    return name+"1";
+});
+console.log(newNames);
+
+
+//.filter()
+
+let names=["pedro",'jess','leon',"pedro"];
+
+const filteredName = names.filter((name)=>{
+    return name!=="pedro";
+});
+
+console.log(filteredName);
